@@ -20,55 +20,6 @@ export default function App() {
     showLoader(() => setActiveLink(link));
   }
 
-const jobData = [
-  { title: "Frontend Developer", location: "Remote", type: "Full-time" },
-  { title: "Backend Developer", location: "Remote", type: "Full-time" },
-  { title: "UI/UX Designer", location: "Remote", type: "Full-time" },
-  { title: "Product Manager", location: "Remote", type: "Full-time" },
-  { title: "DevOps Engineer", location: "Remote", type: "Full-time" },
-  { title: "QA Engineer", location: "Remote", type: "Full-time" },
-  { title: "Mobile Developer", location: "Remote", type: "Full-time" },
-  { title: "Data Analyst", location: "Remote", type: "Full-time" },
-  { title: "Fullstack Developer", location: "Remote", type: "Full-time" },
-];
-const JobPosts = () => {
-  return (
-    <div className="jobs-grid">
-      {jobData.map((job, index) => (
-        <div key={index} className="container">
-          <h1>{job.title}</h1>
-          <p><strong>Location:</strong> {job.location}</p>
-          <p><strong>Job Type:</strong> {job.type}</p>
-
-          <h2>About the Role</h2>
-          <p>This is a dynamic and challenging role. You will work with a talented team to build amazing products.</p>
-
-          <h2>Responsibilities</h2>
-          <ul>
-            <li>Develop and maintain web applications.</li>
-            <li>Collaborate with designers and backend developers.</li>
-            <li>Ensure the technical feasibility of UI/UX designs.</li>
-          </ul>
-
-          <h2>Requirements</h2>
-          <ul>
-            <li>Proven experience in relevant field.</li>
-            <li>Strong technical knowledge and problem-solving skills.</li>
-          </ul>
-
-          <h2>Benefits</h2>
-          <ul>
-            <li>Competitive salary</li>
-            <li>Flexible working hours</li>
-            <li>Remote work options</li>
-          </ul>
-
-          <a href="mailto:jobs@example.com" className="apply-button">Apply Now</a>
-        </div>
-      ))}
-    </div>
-  );
-};
 
   return (
     <>
@@ -116,6 +67,7 @@ const JobPosts = () => {
       }}
     >
       <div className="content-wrapper">
+        <img src="/images/207042.png" alt="lodgik"></img>
         <h1>Welcome to the Home Page!</h1>
         <p>
           LODGIK is a leading provider of semiconductor solutions, driving
