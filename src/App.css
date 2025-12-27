@@ -1,0 +1,325 @@
+/* RESET + FULL SCREEN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* LAYOUT WRAPPER */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #1176db;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  color: #cfd8dc;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a.active {
+  color: #ff525e;
+  font-weight: bold;
+  border-bottom: 2px solid #52b7ff;
+  padding-bottom: 4px;
+}
+
+/* MAIN CONTENT */
+main {
+  flex: 1;
+  width: 100%;
+}
+.content-section1 {
+  width: 100%;
+  min-height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/semiconductor-bg.jpg'); /* Your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+}
+
+/* HOME LANDING CONTENT */
+.content-section {
+  min-height: calc(100vh - 80px);
+  padding: 80px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* HERO FULL SCREEN */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1581090700227-1e37b190418e")
+    center / cover no-repeat;
+  color:#cfd8dc
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 28, 45, 0.75);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  padding: 100px 40px;
+}
+
+.badge {
+  background: #ff5252;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background: #ff5252;
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+/* TEAM SECTION */
+.team {
+  padding: 80px 40px;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.team h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ff5252;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 40px;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.member-card {
+  background: white;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.member-card h3 {
+  font-size: 18px;
+}
+
+.member-card small {
+  color: gray;
+}
+
+/* LOADER */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #ff5252;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #0b1c2d;
+  color: white;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #cfd8dc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+
+
+  
+.content-section1 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  background: url('./images/semiconductor.jpg') no-repeat center/cover;
+  
+  color: #ffffff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.content-section1 .content-wrapper {
+  background: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 700px;
+}
+
+.content-section1 h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.content-section1 p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.content-section1 .btn-primary {
+  background-color: #ff5252;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.content-section1 .btn-primary:hover {
+  background-color: #e04848;
+}
+
+}
