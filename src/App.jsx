@@ -60,7 +60,7 @@ export default function App() {
       <main>
         {activeLink === "home" && (
           <section className="content-section1">
-            <img
+            {/* Example background image can be added in CSS */}
             <h2>Welcome to the Home Page!</h2>
             <p>
               LODGIK is a leading provider of semiconductor solutions, driving
@@ -118,9 +118,7 @@ export default function App() {
           </section>
         )}
 
-        {activeLink === "embedded" && (
-          <h2 className="page">Embedded Services</h2>
-        )}
+        {activeLink === "embedded" && <h2 className="page">Embedded Services</h2>}
         {activeLink === "about" && <h2 className="page">About Us</h2>}
         {activeLink === "careers" && <h2 className="page">Careers</h2>}
         {activeLink === "contact" && <h2 className="page">Contact Us</h2>}
