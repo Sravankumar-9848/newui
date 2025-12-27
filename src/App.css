@@ -274,52 +274,105 @@ footer p {
 
   }
 
+}
+/* ABOUT US SECTION */
+.about-us-section {
+  padding: 80px 40px;
+  background-color: #f5f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0a2540;
+   justify-content: space-between; 
+   align-items: flex-start;
 
-
-  
-.content-section1 {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;  /* Center horizontally */
-  align-items: center;      /* Center vertically */
-  background: url('./images/semiconductor.jpg') no-repeat center/cover;
-  
-  color: #ffffff;
-  text-align: center;
-  padding: 0 20px;
 }
 
-.content-section1 .content-wrapper {
-  background: rgba(0, 0, 0, 0.5); /* Overlay for readability */
-  padding: 40px 30px;
-  border-radius: 12px;
-  max-width: 700px;
+
+
+.about-text {
+  flex: 1 1 600px;
+  
 }
 
-.content-section1 h2 {
-  font-size: 3rem;
+.about-text h1 {
+  font-size: 36px;
   margin-bottom: 20px;
 }
 
-.content-section1 p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
+.about-text h1 strong {
+  color: #ff5252;
 }
 
-.content-section1 .btn-primary {
-  background-color: #ff5252;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.about-text h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
   font-size: 16px;
-  transition: background 0.3s ease;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555555;
 }
 
-.content-section1 .btn-primary:hover {
-  background-color: #e04848;
+.about-image {
+  flex: 0 0 auto;
+  display:flex;
+  text-align: center;
+   justify-content: flex-end; /* Push image to right */
 }
 
+.about-image img {
+  width: 300px; /* Or any width you like */
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  display: block;
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .about-text h1 {
+    font-size: 28px;
+  }
+
+  .about-text h3 {
+    font-size: 20px;
+  }
+}
+.aboutcontent-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+  background: hsl(200, 20%, 97%);
+  gap: 60px;
+}
+/* RIGHT IMAGE */
+.about-image {
+  flex: 5;
+  display: top;
+  justify-content: flex-start;
+ 
+}
+
+.about-image img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  
+}
+
+
+
+
+   
+
+
